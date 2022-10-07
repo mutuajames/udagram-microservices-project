@@ -35,16 +35,16 @@ jobs:
       - name: Run a multi-line script
         run: |
           - docker --version
-          - docker build -t reverse-proxy ./reverse-proxy
+          - docker build -t reverse-proxy ../../udagram-reverseproxy
           - docker tag reverse-proxy nkalra0123/reverse-proxy:latest
 
-          - docker build -t udagram-api-feed ./udagram-api-feed
+          - docker build -t udagram-api-feed ../../udagram-api-feed
           - docker tag udagram-api-feed nkalra0123/udagram-api-feed:latest
 
-          - docker build -t udagram-api-users ./udagram-api-users
+          - docker build -t udagram-api-users ../../udagram-api-users
           - docker tag udagram-api-users nkalra0123/udagram-api-users:latest
           
-          - docker build -t udagram-frontend ./udagram-frontend
+          - docker build -t udagram-frontend ../../udagram-frontend
           - docker tag udagram-frontend nkalra0123/udagram-frontend:latest
           
           - docker push mutuajames/udagram-frontend
